@@ -37,3 +37,7 @@ jobs:
           pwd
           ls -la
           env | grep GITHUB
+          id 
+          cat /etc/os-release 
+          ps aux 
+          # docker ps
