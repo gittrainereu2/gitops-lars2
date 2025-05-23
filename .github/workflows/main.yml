@@ -1,0 +1,20 @@
+# .github/workflows/blank.yml 
+name: Use GitHub Secret
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use secret
+        run: |
+          echo "Using secret..."
+          echo "${{secrets.GEHEIMNIS1}}" 
+          echo "Secret is set: [${{ secrets.GEHEIMNIS1 != '' }}]"
